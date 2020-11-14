@@ -1,0 +1,12 @@
+{
+  "name": "balance-fetcher-service",
+  "version": "1.0.0",
+  "description": "This service allows user to get wallet balance",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@solana/web3.js": "0.87.0",
+    "express": "4.17.1"
+  }
+}

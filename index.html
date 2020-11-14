@@ -1,0 +1,23 @@
+<html>
+<body>
+    <form>
+        <h1> Get your balance </h1>
+        <div class="form-group">
+            <label for="Address">Enter Public Address</label>
+            <input type="text" id="accountKey" name="accountKey">
+        </div>
+        <button type="button" onclick="getBalance()">Get balance</button>
+    </form>
+
+    <script>
+        async function getBalance() {
+            let accountKey = document.getElementById('accountKey').value;
+            const response = await fetch(`http://localhost:5000/balance?accountKey=${accountKey}`);
+            const result = await response.json();
+            alert(`The balance for account key : ${result.accountKey} is ${result.balance} SOL`);
+        }
+    </script> 
+        
+</body>
+</html>
+        
